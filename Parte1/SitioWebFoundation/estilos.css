@@ -1,0 +1,682 @@
+
+
+html {
+    color: #4D4D4D;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
+.correo:before {
+  content: "\e900";
+}
+.facebook:before {
+  content: "\e901";
+}
+
+.twitter:before {
+  content: "\e903";
+}
+.youtube:before {
+  content: "\e904";
+}
+
+.amarillo{
+    color:yellow;
+}
+
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+ * Helpers
+ */
+
+.box{
+    width: 100%;
+    max-width: 1175px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+    .box--center{
+        max-width: 1000px;
+    }
+
+    .box__courses{
+        display: flex;
+        justify-content: space-around;
+        color:#fff;
+        padding: 5rem 0;
+        
+    }
+
+    .box__courses--one{
+        background-color: #369DC1;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 10px;
+        padding: 2rem 0;
+        max-width: 485px;
+        width: 100%;
+    }
+
+    .box__courses--one div{
+        width: 100%;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .box__courses--one h4{
+        font-size: 2.5rem;
+        font-weight: 500;
+        border-bottom: 1px solid #fff;
+        margin:0;
+        text-align: right;
+        line-height: 1;
+        padding-bottom: 0.7rem;
+        
+    }
+
+    .box__courses--one p{
+        font-size: 1.2rem;
+    }
+
+    .box__courses--dos{
+        background-color: #566270;
+    }
+
+    
+
+
+.list-none{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+
+.overlay{
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+}
+
+.img-responsive{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.sin-margin{
+    margin: 0;
+    padding: 0;
+}
+
+.text-center{
+    text-align: center;
+    display: block;
+}
+
+.decoration-none{
+    text-decoration: none;
+    color: #4D4D4D;
+}
+
+
+/*
+ * Botones
+ */
+
+ .button{
+     border-radius: 10px;
+     font-family: 'Dosis';
+     text-decoration: none;
+     color: #fff;
+     padding:0.5rem 1rem;
+     margin:1rem 0;
+     display: inline-block;
+     border: 0;
+ }
+
+    .button--main{
+        background-color: #FF5253;
+    }
+
+
+.decoration-none{
+     text-decoration: none;
+}
+
+.header{
+    font-family: 'Relaway' , Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+    .header__top,
+    .header__bottom,
+    .nav__main ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__top,
+    .header__top a{
+        color:#CCCCCC;
+    }
+
+    .header__top{
+        border-bottom: 2px solid #CCCCCC;
+        padding: 0.5rem 0 0.2rem;
+    }
+
+    .header__rs a{
+        font-size: 1.3rem;
+    }
+
+    .header__bottom{
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+
+
+.list-courses{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+    .list-courses__item{
+        max-width: 350px;
+        border:1px solid #D2D2D2;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1.25rem 0;
+        -moz-box-shadow: 1px 1px 3px #D2D2D2;
+        -webkit-box-shadow: 1px 1px 3px #D2D2D2;
+        box-shadow: 1px 1px 3px #D2D2D2;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .list-courses__item:hover{
+           -moz-box-shadow: 2px 2px 5px #ADADAD;
+            -webkit-box-shadow: 2px 2px 5px #ADADAD;
+            box-shadow: 2px 2px 5px #ADADAD;
+        }
+
+    .list-courses__information{
+        padding: 1rem;
+    }
+
+        .list-courses__information h3{
+            font-weight: 500;
+            font-size:1.5rem;
+            
+        }
+
+         .list-courses__information p{
+            font-size:1.1rem;
+            border-bottom:1px solid #CDCDCD;
+            padding-bottom: 0.5rem;
+            
+        }
+    
+    .list-courses__author{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem 1rem;
+        font-family: 'Raleway', sans-serif;
+    }
+
+        
+
+    .list-courses__author figure a{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .list-courses__author figure img{
+        max-width: 30%;
+        margin-right: 0.5rem;
+    }
+
+    .list-courses__author div a{
+        font-weight: 400;
+        display: block;
+    }
+
+        
+
+
+.price{
+    text-align: center;
+    padding: 0.5rem 0;
+    color:#fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+    .price--free{
+        background-color: #FF5253;
+    }
+
+    .price--premiun{
+         background-color: #6CC8BD;
+    }
+
+.nav__main li{
+    margin:0 0.8rem;
+}
+
+
+.nav__main a{
+    color: #4D4D4D;
+    font-size:1.4rem;
+    overflow: hidden;
+}
+    .nav__main a.active{
+        font-weight: 800;
+    }
+
+.main{
+    margin:1rem 0;
+}
+
+.slider{
+    background-image: url("../img/startup.jpg");
+    padding:8rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    position: relative;
+}
+
+    .slider__information{
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .slider__left{
+        max-width: 500px;
+    }
+
+.title{
+    font-family: 'Dosis',Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    margin:0.5rem 0;
+}
+
+    .title--big{
+        font-weight: 600;
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    .title--small{
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+.register{
+    background-color: #566270;
+    color: #fff;
+}
+
+    .register .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5rem 0;
+    }
+
+    .register__testimonial{
+        max-width:40%;
+    }
+
+        .register__testimonial strong{
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .register__user{
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .register__information{
+            margin-left:1rem;
+            border-bottom:1px solid #fff;
+            padding-bottom:1rem;
+        }
+
+    .register__newsletter{
+       max-width:25%;
+       border:1px solid #fff;
+       border-radius:10px;
+       padding: 3rem 1rem;
+    }
+
+        .register__newsletter strong{
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            display: block;
+        }
+
+        .register__newsletter input[type="text"]{
+            display: block;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+            border:0;
+            padding:0.5rem;
+            box-sizing: border-box;
+        }
+
+
+
+
+.youtube-analytics{
+    background-color: #F9F9F9;
+    padding: 5rem 0;
+}
+
+.youtube-analytics__date{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.youtube-analytics__information{
+    text-align: center;
+    max-width: 70%;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 1.6rem;
+    
+    
+}
+
+.youtube-analytics__number span{
+    color: #FF5253;
+    display:block;
+    font-size:4.5rem;
+    
+}
+
+.youtube-analytics__number strong{
+    color: #0071BC;
+    display:block;
+    font-size:2rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
