@@ -6,18 +6,18 @@
     <title>Pagina web Boostrap</title>
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
+        crossorigin="anonymous"><!--Llamamos las librerias de CDN  de la pagina oficial de boostrap, para poder usar sus componentes-->
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css"><!--Tendra en cuenta este archivo, con el fin de darle estilo a nuestra pagina-->
 </head>
 
 <body>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+        <div class="container"><!--Este componente visualiza en la parte superiro un menu-->
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
     </nav>
 
     <!-- HEADER -->
-    <header class="main-header">
+    <header class="main-header"><!--Este componente es como la cabeza o el titulo de la pagina web-->
 
         <div class="container">
             <div class="row d-flex h-100">
@@ -60,7 +60,7 @@
 
     <!-- NEWSLETTER  -->
     <section id="newsletter" class="bg-dark text-white py-5">
-        <div class="container">
+        <div class="container"><!--Vendra una parte de suscripcion, donde el usuario podra colocar su usuario y contraseña-->
             <div class="row">
                 <div class="col-md-4">
                     <input type="text" class="form-control form-control-lg" placeholder="Ingrese su nombre">
@@ -76,7 +76,7 @@
             </div>
         </div>
     </section>
-    <ul class="list-group">
+    <ul class="list-group"><!--Este componente es como un desplegable, que al darle click se desplega un texto-->
         <li class="list-group-item">Canal de panama</li>
         <li class="list-group-item">Guerra de los mil dias</li>
         <li class="list-group-item">Independencia</li>
@@ -88,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="card text-center border-primary">
+                    <div class="card text-center border-primary"><!--Se refieren a cartas, donde cada una contiene informacion-->
                         <div class="card-body">
                             <h3>General Simon Bolivar</h3>
                             <img src='simon.jpg' />
@@ -156,7 +156,7 @@
     </section>
 
     <!-- ACCORDION -->
-    <section class="container text-center p-5">
+    <section class="container text-center p-5"><!--Se ubican en la parte derecha de la pagina y son hipervinculos que direccionan a otra subpagina.-->
         <div class="row">
             <div class="accordion" id="accordionExample">
                 <div class="card">
@@ -244,7 +244,7 @@
 
 
     <section class="text-center team">
-        <div class="container p-5">
+        <div class="container p-5"><!--Mas cartas-->
             <h1 class="text-center text-white">Otros personajes</h1>
 
             <div class="row">
@@ -342,10 +342,10 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Los mejores presidentes</a>
-                <a class="dropdown-item" href="#">Los peores presidentes</a>
+                <a class="dropdown-item" href="#">Los peores presidentes</a><!--Es un desplegable-->
 
             </div>
-            <div class="form-group">
+            <div class="form-group"><!--Componente de varias opciones-->
                 <label for="exampleFormControlSelect2">Escoja un numero:</label>
                 <select multiple class="form-control" id="exampleFormControlSelect2">
                     <option>1</option>
@@ -358,7 +358,7 @@
         </div>
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1"><!--Componente de marcado o no marcado-->
                 ¿Es usted Colombiano?
             </label>
         </div>
@@ -403,7 +403,7 @@
                 </div>
 
             </div>
-            <nav aria-label="Page navigation example">
+            <nav aria-label="Page navigation example"><!--Es un componente de paginacion-->
                 <ul class="pagination">
                     <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -416,7 +416,7 @@
 
     </section>
 
-    <footer>
+    <footer><!--Pie de pagina-->
         <div class="container p-3">
             <div class="row text-center text-white">
                 <div class="col ml-auto">
@@ -432,7 +432,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script><!--CDN como el de arriba pero en la implementacione en javascript-->
 </body>
 
 </html>
