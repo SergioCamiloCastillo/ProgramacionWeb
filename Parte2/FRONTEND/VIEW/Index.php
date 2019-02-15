@@ -21,12 +21,13 @@
                 <br />
                 <div align="right">
                     <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Add</button>
-                    <button type="button" id="seleccionar" class="btn btn-warning btn-xs update" data-toggle="modal"
-                        data-target="#seleccionar">Ver datos</button>
+                    <button type="button" id="edit_button" data-toggle="modal" data-target="#editar" class="btn btn-warning btn-xs update">Editar</button>
+
+                    
 
                     <button type="button" id="delete" class="btn btn-danger btn-xs delete" data-toggle="modal"
                         data-target="#eliminar">Delete</button>
-                    <script src='../CONTROL/funcion.js'></script>
+                    
 
                 </div>
                 <br /><br />
@@ -138,6 +139,11 @@
                             <td>
                             
                             <?php echo $row['TipoTarjeta']; ?>
+                            
+                            </td>
+                            <td>
+                            
+                            <?php echo $row['Titular']; ?>
                             
                             </td>
                             <td>
@@ -299,6 +305,103 @@
                 </form>
             </div>
         </div>
+        <div id="editar" class="modal fade">
+            <div class="modal-dialog">
+                <form method="post" id="user_form" enctype="multipart/form-data">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Editar Usuario</h4>
+                        </div>
+
+                        <div class="modal-body">
+                        <label>ID</label>
+                            <input type="text" name="txtEditarID" id="txtEditarID" class="form-control"
+                                required='' />
+                            <br />
+                            <h3><strong>Informacion personal</strong></h3><br /><br />
+
+                            <label>Primer nombre</label>
+                            <input type="text" name="txtEditarPrimerNombre" id="txtEditarPrimerNombre" class="form-control"
+                                required='' />
+                            <br />
+                            <label>Primer apellido</label>
+                            <input type="text" name="txtEditarPrimerApellido" id="txtEditarPrimerApellido" class="form-control"
+                                required='' />
+                            <br />
+                            <label>Email</label>
+                            <input type="text" name="txtEditarEmail" id="txtEditarEmail" class="form-control" required='' />
+                            <br />
+                            <h3><strong> Informacion de tarjeta de credito</strong></h3><br /><br />
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1"> Tipo tarjeta Credito</label>
+                                <select class="form-control" id="txtEditarTipoTarjeta">
+                                    <option>Visa</option>
+                                    <option>Mastercard</option>
+                                    <option>American Express</option>
+
+                                </select>
+                            </div>
+                            <label>Titular de la tarjeta</label>
+                            <input type="text" name="txtEditarTitular" id="txtEditarTitular" class="form-control" required='' />
+                            <br />
+                            <label>Numero de la tarjeta</label>
+                            <input type="text" name="txtEditarNumTarjeta" id="txtEditarNumTarjeta" class="form-control" required='' />
+                            <br />
+                            <label>CVV2</label>
+                            <input type="text" name="txtEditarCVV2" id="txtEditarCVV2" class="form-control" />
+                            <br />
+                            <label>Fecha de expedicion</label><br />
+                            <input type="date" id='Editardate' required=''><br />
+                            <h3><strong>Direccion de envio</strong></h3>
+                            <label>Direccion</label>
+                            <input type="text" name="txtEditarDireccion" id="txtEditarDireccion" class="form-control" required='' />
+                            <br />
+                            <label>Ciudad</label>
+                            <input type="text" name="txtEditarCiudad" id="txtEditarCiudad" class="form-control" required='' />
+                            <br />
+                            <label for="exampleFormControlSelect1"> Departamento</label>
+                            <select class="form-control" id="txtEditarDepartamento">
+                                <option>Boyaca</option>
+                                <option>Cundinamarca</option>
+                                <option>Nariño</option>
+                                <option>Santander</option>
+
+
+                            </select>
+                            <label>ZIP</label>
+                            <input type="text" name="txtEditarZIP" id="txtEditarZIP" class="form-control" required='' />
+                            <br />
+                            <label for="exampleFormControlSelect1"> Pais</label>
+                            <select class="form-control" id="txtEditarPais">
+                                <option>Colombia</option>
+                                <option>Estados Unidos</option>
+                                <option>Japon</option>
+                                <option>Uruguay</option>
+
+
+                            </select>
+                            <label>Telefono</label>
+                            <input type="text" name="txtEditarTelefono" id="txtEditarTelefono" class="form-control" required='' />
+                            <br />
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required=''>
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Acepto Terminos y condiciones
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" name="user_id" id="user_id" />
+                            <input type="hidden" name="operation" id="operation" />
+                            <input type="submit" name="botonEditar" id="botonEditar" class="btn btn-success" value="Editar" />
+                            <script src='../CONTROL/funcion.js'></script>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
         <div id="eliminar" class="modal fade">
             <div class="modal-dialog">
@@ -322,26 +425,7 @@
                 </form>
             </div>
         </div>
-        <div id="seleccionar" class="modal fade">
-            <div class="modal-dialog">
-                <form method="post" id="user_form" enctype="multipart/form-data">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Delete</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h3><strong>Ver registros</strong></h3><br /><br />
-
-
-                            <input type="submit" name="boton" id="seleccionar" class="btn btn-success" value="Eliminar" />
-                            <script src='../CONTROL/funcion.js'></script>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-        </div>
+       
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
