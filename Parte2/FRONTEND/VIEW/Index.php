@@ -2,12 +2,12 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  <!-- Para aceptar letras latinas-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css"><!--Llama los estilos del css alojados en aquel archivo -->
     <title>SitioWeb</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /><!--Es la implementacion de boostrap en html desde CDN-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 
 </head>
@@ -17,9 +17,9 @@
         <div class="container box">
             <h1 align="center">CRUD Programacion Web</h1>
             <br />
-            <div class="table-responsive">
+            <div class="table-responsive"><!--Es un componente de boostrap para mostrar en forma de tabla una serie de elementos -->
                 <br />
-                <div align="right">
+                <div align="right"><!--Añadimos los botones de añadir, editar y eliminar del crud -->
                     <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Add</button>
                     <button type="button" id="edit_button" data-toggle="modal" data-target="#editar" class="btn btn-warning btn-xs update">Editar</button>
 
@@ -31,7 +31,7 @@
 
                 </div>
                 <br /><br />
-                <table id="user_data" class="table table-bordered">
+                <table id="user_data" class="table table-bordered"><!--En forma de tabla con boostrap, se mostraran los valores de la base de datos -->
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
  
                             <thead>
@@ -74,7 +74,7 @@
                             
                             <?php
                             
-                            $servername = "localhost";
+                            $servername = "localhost";//
                             
                             $username = "root";
                             
@@ -82,7 +82,7 @@
                             
                             $dbname = "programacionweb";
                             
-                            // Create connection
+                            // Crear conexion con la base de datos, para mostrar los datos en la pagina principal
                             
                             $conn = new mysqli($servername, $username, $password, $dbname);
                             
@@ -214,7 +214,7 @@
 
             </div>
         </div>
-        <div id="userModal" class="modal fade">
+        <div id="userModal" class="modal fade"><!--En esta clase esta direccionada al principio del archivo,cuando se da al boton añadir viene a esta parte y ejecuta el codigo correspondiente -->
             <div class="modal-dialog">
                 <form method="post" id="user_form" enctype="multipart/form-data">
                     <div class="modal-content">
@@ -305,7 +305,7 @@
                 </form>
             </div>
         </div>
-        <div id="editar" class="modal fade">
+        <div id="editar" class="modal fade"><!--Cuando arriba se le da el boton editar, viene a esta parte del codigo -->
             <div class="modal-dialog">
                 <form method="post" id="user_form" enctype="multipart/form-data">
                     <div class="modal-content">
@@ -403,7 +403,7 @@
         </div>
 
 
-        <div id="eliminar" class="modal fade">
+        <div id="eliminar" class="modal fade"><!--Cuando se le da eliminar viene aca -->
             <div class="modal-dialog">
                 <form method="post" id="user_form" enctype="multipart/form-data">
                     <div class="modal-content">
@@ -418,7 +418,7 @@
                             <input type="text" name="txtEliminarID" id="txtEliminarID" class="form-control" required='' />
                             <br />
                             <input type="submit" name="boton" id="botonEliminar" class="btn btn-success" value="Eliminar" />
-                            <script src='../CONTROL/funcion.js'></script>
+                            <script src='../CONTROL/funcion.js'></script><!--Esta parte direcciona a otro archivo javascript para que haga la parte logica de los botones y los datos -->
                         </div>
 
                     </div>
@@ -430,7 +430,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script><!-- -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
